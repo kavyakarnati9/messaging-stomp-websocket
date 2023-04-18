@@ -52,6 +52,10 @@
 			<artifactId>jquery</artifactId>
 			<version>3.1.1-1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -72,11 +76,6 @@
 				<configuration>
 					<skip>false</skip>
 					<imageName>message-websocket</imageName>
-					<buildArgs>
-						--no-fallback
-						--initialize-at-build-time=com.example.messagingstompwebsocket.MessagingStompWebsocketApplication
-					</buildArgs>
-					<mainClass>com.example.messagingstompwebsocket.MessagingStompWebsocketApplication</mainClass>
 				</configuration>
 			</plugin>
 			<plugin>

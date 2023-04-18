@@ -35,7 +35,7 @@ COPY . /build
 # Build
 RUN mvn --no-transfer-progress clean package -Pnative
 
-RUN echo $(ls -ltr /build/target)
+RUN echo $(ls -l /build/target)
 
 # The deployment Image
 FROM docker.io/oraclelinux:8-slim
@@ -43,5 +43,5 @@ FROM docker.io/oraclelinux:8-slim
 EXPOSE 9191
 
 # Copy the native executable into the containers
-COPY --from=builder /build/target/messaging-stomp-websocket .
-ENTRYPOINT ["/messaging-stomp-websocket"]
+COPY --from=builder /build/target/message-websocket .
+ENTRYPOINT ["/message-websocket"]
