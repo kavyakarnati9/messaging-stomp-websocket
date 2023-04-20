@@ -1,6 +1,5 @@
 package com.example.messagingstompwebsocket;
 
-import com.example.messagingstompwebsocket.model.Greeting;
 import com.example.messagingstompwebsocket.model.HelloMessage;
 import org.junit.Before;
 import org.junit.Test;
